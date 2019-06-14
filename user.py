@@ -8,7 +8,7 @@ class User:
         _init_method that helps us define properties for our objects
         """
         self.user_name = user_name
-        self.password
+        self.password = password
         
 
 
