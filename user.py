@@ -36,7 +36,7 @@ def find_by_user_name(cls,user_name):
             return user
 
 @classmethod
-def user_exists(cls,user_name,password):
+def user_exist(cls,user_name,password):
     """
     Method that checks if  a user exists from the user list.
     Args:
@@ -56,17 +56,14 @@ def user_exists(cls,user_name,password):
 
 
 
+
 ## Credentials Class
 class Credentials:
     """
     Class that generates new instances of contacts
     """
     credentials_list = []
-    def save_credentials(self):
-        """
-        save_credentials method saves credentials objects into credentials_list
-        """
-        Credentials.credentials_list.append(self)
+
 
 
     def __init__(self, site_name, site_username, site_password):
@@ -77,7 +74,25 @@ class Credentials:
         self.site_username = site_username
         self.site_password = site_password
 
-       
+    def save_credentials(self):
+        """
+        save_credentials method saves credentials objects into credentials_list
+        """
+        Credentials.credentials_list.append(self)
+
+@classmethod
+def display_credentials(cls):
+    """
+    method that returns the credentials list
+    """
+    return cls.credentials_list
+
+def delete_credential(self):
+    """
+    delete_credential method deletes a credential account from the credential list
+    """
+    Credentials.credentials_list.remove(self)
+    
 
 
 
