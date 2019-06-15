@@ -20,24 +20,29 @@ def find_user(user_name):
     return User.find_by_user_name(user_name)
 
 def check_existing_users(user_name,password):
+    
     """
-    Function that checks if a user exists with that username and returns a boolean
+    Function that check if a user exists with that username and return a boolean
     """
+
+
     user = User.user_exist(user_name,password)
+
     return user
 
-### credentials
-def create_credential(site_name,site_username,site_password):
-    """
+
+def create_credential(site_name, site_username, site_password):
+    '''
     Function to create a new credential account
-    """
-    new_credential = Credentials(site_name,site_username,site_password)
+    '''
+    new_credential = Credentials(site_name, site_username, site_password)
     return new_credential
 
+
 def save_credentials(credential):
-    """
+    '''
     Function to save credentials
-    """
+    '''
     credential.save_credential()
 
 
@@ -175,10 +180,10 @@ def main():
                 print("Login failed. Wrong Password or Username")
 
 
-
 if __name__ == '__main__':
-
     main()
+
+ 
 
 
 
