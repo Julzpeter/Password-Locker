@@ -92,8 +92,34 @@ def delete_credential(self):
     delete_credential method deletes a credential account from the credential list
     """
     Credentials.credentials_list.remove(self)
-    
 
+@classmethod
+def find_by_site_name(cls,site_name):
+    """
+    method that takes in a site_name and returns a credential that matches that site name
+    Args:
+    site_name: Site_name to search for
+    Returns: 
+    Site_name of credential that matches the site_name
+    """
+    for credential in cls.credentials_list:
+        if credential.site_name == site_name:
+            return credential
+
+
+@classmethod
+def credential_exist(cls,site_name):
+    """
+    method that checks if a credential account exists from the credential list
+    Args:
+    site_name: Site_name to search if it exists
+    Returns:
+    Boolean: True or false depending if the credential exists
+    """
+    for credential in cls.credentials_list:
+        if credential.site_name == site_name:
+            return True
+    return False
 
 
 
