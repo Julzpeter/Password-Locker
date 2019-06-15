@@ -5,11 +5,14 @@ class User:
     """
 
     user_list = []
+
     def save_user(self):
         """
         save_user method saves users objects into user_list
         """
         User.user_list.append(self)
+
+
 
     def __init__(self,user_name,password):
         """
@@ -29,7 +32,7 @@ class Credentials:
         save_credentials method saves credentials objects into credentials_list
         """
         Credentials.credentials_list.append(self)
-        
+
 
     def __init__(self, site_name, site_username, site_password):
         """
