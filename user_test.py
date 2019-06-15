@@ -1,12 +1,13 @@
-import unittest
-from user import User
-from credentials import Credentials
+import unittest 
+from user import User,Credentials
+
 
 class TestUser(unittest.TestCase):
     """
     Test class that defines test cases for the user class behaviours
     """
     """
+    Args:
     unittest.TestCase: TestCase class that helps in creating test cases
     """
 
@@ -17,8 +18,29 @@ class TestUser(unittest.TestCase):
         self.new_user = User("JulietKoech","12338")
         self.new_credentials = Credentials("Twitter", "Julz", "12338")
 
-    def test_init(self):
+    def test__init__(self):
         """test_init test case to test if the object is initialized properly
         """
+
+        self.assertEqual(self.new_user.user_name,"JulietKoech")
+        self.assertEqual(self.new_user.password,"12338")
+
+        self.assertEqual(self.new_credentials.site_name,"Twitter")
+        self.assertEqual(self.new_credentials.site_username,"Julz")
+        self.assertEqual(self.new_credentials.site_password,"12338")
+
+    def test_save_contact(self):
+        """
+        
+
+if __name__ =='__main__':
+        unittest.main()
+
+
+
+
+
+
+
 
 
