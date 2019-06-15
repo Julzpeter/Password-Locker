@@ -7,8 +7,9 @@ class User:
     user_list = []
     def save_user(self):
         """
-        save_contact method saves contact objects into contact_list
+        save_user method saves users objects into user_list
         """
+        User.user_list.append(self)
 
     def __init__(self,user_name,password):
         """
@@ -23,6 +24,10 @@ class Credentials:
     Class that generates new instances of contacts
     """
     credentials_list = []
+    def save_credentials(self):
+        """
+        save_credentials method saves credentials objects into credentials_list
+        """
 
     def __init__(self, site_name, site_username, site_password):
         """
