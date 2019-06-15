@@ -25,8 +25,17 @@ class User:
 def find_by_name(cls,user_name):
     """
     Method that takes ina name and returns a name that matches that name
+    Args:
+    name: name to search for
+    Returns:
+    Name of person that matches the name
     """
-    
+    for user in cls.user_list:
+        if user.user_name == user_name:
+            return user_name
+
+
+
 
 
 ## Credentials Class
