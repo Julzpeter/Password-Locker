@@ -21,7 +21,15 @@ class User:
         self.user_name = user_name
         self.password = password
 
+@classmethod
+def find_by_name(cls,user_name):
+    """
+    Method that takes ina name and returns a name that matches that name
+    """
+    
 
+
+## Credentials Class
 class Credentials:
     """
     Class that generates new instances of contacts
