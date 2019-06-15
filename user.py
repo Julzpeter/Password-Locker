@@ -5,6 +5,10 @@ class User:
     """
 
     user_list = []
+    def save_user(self):
+        """
+        save_contact method saves contact objects into contact_list
+        """
 
     def __init__(self,user_name,password):
         """
