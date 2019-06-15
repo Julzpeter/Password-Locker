@@ -43,7 +43,7 @@ class TestUser(unittest.TestCase):
         User.user_list = []
         Credentials.credentials_list = []
 
-    def test_save_multiple_user(self):
+def test_save_multiple_user(self):
         """
         test_save_multiple _user to check if we can save multiple user object to our user_list
         """
@@ -52,16 +52,19 @@ class TestUser(unittest.TestCase):
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
-    def test_find_user_by_name(self):
+def test_find_user_by_user_name(self):
         """
-        test to check if we can find a user by name and display information
+        test to check if we can find a user by user_name and display information
         """
         self.new_user.save_user()
         test_user = User("Test","12338")
         test_user.save_user()
         found_user = User.find_by_user_name("Test")
-        self.assertEqual(found_user.user_name,test_user.user_name)
         
+        self.assertEqual(found_user.user_name,test_user.user_name)
+
+def 
+
 
 
 

@@ -20,19 +20,37 @@ class User:
         """
         self.user_name = user_name
         self.password = password
-
+    
 @classmethod
-def find_by_name(cls,user_name):
+def find_by_user_name(cls,user_name):
     """
-    Method that takes ina name and returns a name that matches that name
+    Method that takes in a user_name and returns a user that matches that number.
+
     Args:
-    name: name to search for
-    Returns:
-    Name of person that matches the name
+    user_name: User_name to search for 
+    Returns: 
+    User of person that matches the user_name.
     """
     for user in cls.user_list:
         if user.user_name == user_name:
-            return user_name
+            return user
+
+@classmethod
+def user_exists(cls,user_name,password):
+    """
+    Method that checks if  a user exists from the user list.
+    Args:
+    user_name: User_name to search if it exists
+    Return:
+    Boolean: True or falsedepending if the user exists
+    """
+
+    user = ""
+    for user in cls.user_list:
+        if user.user_name == user_name and user.password == password:
+            user =  user.user_name
+            return user
+
 
 
 
