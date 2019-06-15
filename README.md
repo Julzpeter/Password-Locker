@@ -22,17 +22,13 @@ Run pip install -r requirements.txt to install required libraries
 ## Behavior Driven Development
 
  |   Behavior                                           |   Input             |  Output                |
- |------------------------------------------------------|---------------------|------------------------|  | CC presented as options to create User Account       | choose CC           | Enter required details |  |------------------------------------------------------|---------------------|------------------------|
+ |------------------------------------------------------|---------------------|------------------------|
+ |CC presented as options to create User Account        | choose CC           | Enter required details |
  |LI presented as options to login                      | choose LI           | Enter required details |  
- |------------------------------------------------------|---------------------|------------------------|
  |CA presented as options to create Credentials Account |  choose CA          |Enter required details  |
- |------------------------------------------------------|---------------------|------------------------|
  |CD presented as options to Display Credetial Details  |   choose CD         | Enter required details |
- |------------------------------------------------------|---------------------|------------------------|
  |CF presented as options to Find Credentials Account   |  choose CF          | Enter required details |
- |------------------------------------------------------|---------------------|------------------------|
  |D presented as options to Delete Credentials Account  |   choose D          | Enter required details |
- |------------------------------------------------------|---------------------|------------------------|
  |EX presented as options to Exit account               |   choose EX         | Enter required details |
  
  ## Technologies used
