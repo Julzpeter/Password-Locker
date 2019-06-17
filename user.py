@@ -47,11 +47,19 @@ def user_exist(cls,user_name,password):
 
     user = ""
     for user in cls.user_list:
-        if user.user_name == user_name and user.password == password:
+        if user.user_name == user_name and password == password:
             user =  user.user_name
             return user
 
 
+@classmethod 
+def log_in(cls,user_name,password):
+    """method that enables users to access their credentials
+    """
+    for user in cls.user_list:
+        if user_name == user_name and password == password:
+            return Credentials.credentials_list
+    return False
 
 
 
